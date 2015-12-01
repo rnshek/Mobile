@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:padding="10dp">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id ="@+id/day"
+            android:layout_weight="1"
+            android:text = ""/>   //텍스트뷰 생성
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id ="@+id/save"
+            android:text="저장" /> //저장버튼 생성
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id = "@+id/baseLayout">
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:lines = "15"
+            android:id = "@+id/diary"
+            android:hint="일기 작성"
+            />  //일기 작성할 에딧텍스트 생성
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
