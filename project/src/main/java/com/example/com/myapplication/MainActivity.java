@@ -1,15 +1,18 @@
 package com.example.com.myapplication;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -22,7 +25,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     LinearLayout baseLayout;
 
     DatePicker dp;
@@ -107,7 +110,7 @@ public class MainActivity extends Activity {
                     String str = edtDiary.getText().toString();
                     outFs.write(str.getBytes()); //에디트 텍스트의 대용을 일기 파일에 byte[]형으로 쓰고, 파일을 닫는다.
                     outFs.close();
-                    Toast.makeText(getApplicationContext(), fileName + " 이 저장됨", 0).show(); //저장된 파일의 이름을 토스트 메시지로 출력한다.
+                    Toast.makeText(getApplicationContext(),fileName+ " 이 저장됨", 0).show(); //저장된 파일의 이름을 토스트 메시지로 출력한다.
                 }catch (IOException e) {
                 }
 
